@@ -6,7 +6,6 @@ namespace RepositoryStore.Data.Mapping
 {
     public class ProductMapping : IEntityTypeConfiguration<Product>
     {
-
         public void Configure(EntityTypeBuilder<Product> builder)
         {
             builder.ToTable("Products");
@@ -16,7 +15,7 @@ namespace RepositoryStore.Data.Mapping
             builder.Property(p => p.Title)
                 .IsRequired()
                 .HasMaxLength(160)
-                .HasColumnType("nvarchar");
+                .HasColumnType("varchar");
         }
     }
 }
